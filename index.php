@@ -21,7 +21,6 @@
 				<li><a href=""><span>Access Levels</span></a></li>
 				<li><a href=""><span>Missions</span></a></li>
 				<li><a href=""><span>Partners</span></a></li>
-				<li><a href=""><span>Contact</span></a></li>
 			</ul>
 		</div>
 		<div id="body">
