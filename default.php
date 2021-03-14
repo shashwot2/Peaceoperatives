@@ -13,7 +13,7 @@
 				<a href="index.html"><img src="" alt="To add iamge" /></a>
 			</div>
 			<ul>
-				<li class="current"><a href="index.html"><span>Employees</span></a></li>
+				<li class="current"><a href="default.html"><span>Employees</span></a></li>
 				<li><a href="vehicles.php"><span>Vehicles</span></a></li>
 				<li><a href="access.php"><span>Access Levels</span></a></li>
 				<li><a href="missions.php"><span>Missions</span></a></li>
