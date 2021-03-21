@@ -10,10 +10,10 @@
 	<div id="page">
 		<div id="header">
 			<div>
-				<a href="default.html"><img src="" alt="To add image" /></a>
+				<a href="index.html"><img src="" alt="To add image" /></a>
 			</div>
 			<ul>
-				<li><a href="default.html"><span>Employees</span></a></li>
+				<li><a href="index.html"><span>Employees</span></a></li>
 				<li><a href="vehicles.php"><span>Vehicles</span></a></li>
 				<li><a href="access.php"><span>Access Levels</span></a></li>
 				<li class="current"><a href="missions.php"><span>Missions</span></a></li>
@@ -43,9 +43,9 @@
 			$sql = "SELECT missionemployee.MissonID,Duration,Description,Location,EmployeeID FROM mission,missionemployee,missionlocation WHERE mission.MissonID = missionemployee.MissonID AND missionlocation.MissonID = mission.MissonID;";
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
-			echo "<table border=2 font-size:80%><tr><th>MissonID</th><th>Duration</th><th>Description</th><th>Location</th><th>Assigned EmpID</th></tr>";
+			echo "<table border=2 font-size:80%><tr><th>MissionID</th><th>Duration</th><th>Description</th><th>Location</th><th>Assigned EmpID</th></tr>";
 			while($row = $result->fetch_assoc()) {
-    			echo "<tr><td>".$row["MissionID"]. "</td><td>" . $row["Duration"]. "</td><td>" .$row["Description"]. "</td><td>".$row["Location"]."</td><td>".$row["EmployeeID"]."</td></tr>";
+    			echo "<tr><td>".$row["MissonID"]. "</td><td>" . $row["Duration"]. "</td><td>" .$row["Description"]. "</td><td>".$row["Location"]."</td><td>".$row["EmployeeID"]."</td></tr>";
  			 }
 			echo "</table>";
 			} else {

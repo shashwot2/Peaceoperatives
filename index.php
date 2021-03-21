@@ -10,17 +10,18 @@
 	<div id="page">
 		<div id="header">
 			<div>
-				<a href="index.html"><img src="" alt="To add iamge" /></a>
+				<a href="index.php"><img src="images/peacelogo.png" alt="To add iamge width="150" height="200"></a>
 			</div>
 			<ul>
-				<li class="current"><a href="default.html"><span>Employees</span></a></li>
+				<li class="current"><a href="index.html"><span>Employees</span></a></li>
 				<li><a href="vehicles.php"><span>Vehicles</span></a></li>
 				<li><a href="access.php"><span>Access Levels</span></a></li>
 				<li><a href="missions.php"><span>Missions</span></a></li>
 				<li><a href="partners.php"><span>Partners</span></a></li>
+				<a href="https://github.com/shashwot2/Peaceoperatives/wiki" style="float: right;"><img src="images/help.png" alt="No image" width=50 height=50></a>
 			</ul>
 		</div>
-			
+
 		<div id="body">
 		
 
@@ -54,7 +55,7 @@
 			$conn->close();
 			?></a></h1>
 					<div>
-						<a href="Add an employee"><img src="" alt="To add a + image" /></a>
+						<p> Add an entry </p><a href="Add an employee"><img src="images/add.png" alt="To add a + image" width="50" height="50"></a>
 					</div>
 			</ul>
 

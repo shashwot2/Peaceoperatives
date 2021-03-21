@@ -10,7 +10,7 @@
 	<div id="page">
 		<div id="header">
 			<div>
-				<a href="default.html"><img src="" alt="To add image" /></a>
+				<a href="index.html"><img src="" alt="To add image" /></a>
 			</div>
 			<ul>
 				<li><a href="default.html"><span>Employees</span></a></li>

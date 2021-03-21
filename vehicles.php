@@ -10,10 +10,10 @@
 	<div id="page">
 		<div id="header">
 			<div>
-				<a href="default.html"><img src="" alt="To add image" /></a>
+				<a href="index.html"><img src="" alt="To add image" /></a>
 			</div>
 			<ul>
-				<li><a href="default.html"><span>Employees</span></a></li>
+				<li><a href="index.html"><span>Employees</span></a></li>
 				<li class="current"><a href="vehicles.php"><span>Vehicles</span></a></li>
 				<li><a href="access.php"><span>Access Levels</span></a></li>
 				<li><a href="missions.php"><span>Missions</span></a></li>
