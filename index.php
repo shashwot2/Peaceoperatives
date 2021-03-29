@@ -55,7 +55,7 @@
 			$conn->close();
 			?></a></h1>
 					<div>
-						<p> Add an entry </p><a href="Add an employee"><img src="images/add.png" alt="To add a + image" width="50" height="50"></a>
+						<p> Add an entry </p><a href="addemp.php"><img src="images/add.png" alt="To add a + image" width="50" height="50"></a>
 					</div>
 			</ul>
 
