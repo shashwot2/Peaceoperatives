@@ -38,18 +38,18 @@
 			if ($conn->connect_error) {
  			   die("Connection failed: " . $conn->connect_error);
 			}
-			echo '<form action="addemp.php" method="POST">';
- 			echo 'EmployeeID: <input name="EmployeeID" type="number" min="1"><br/>';
-  			echo 'Contact No: <input name="ContactNo" type="number" required><br/>';
-			echo 'Employee Name: <input name="EmpName" type="text" required><br/>';
+			echo '<form action="addmissions.php" method="POST">';
+ 			echo 'MissionID: <input name="MissionID" type="number" min="1"><br/>';
+  			echo 'Duration: <input name="Duration" type="text" required><br/>';
+			echo 'Description <input name="Description" type="text" required><br/>';
  			echo '<input type="Submit">';
   			echo '</form>';
 {
-			$stmt = $conn->prepare("INSERT INTO employee (EmployeeID,ContactNo,EmpName) values (?,?,?)");
-			$eid = $_POST['EmployeeID'];
-			$econtact = $_POST['ContactNo'];
-			$ename = $_POST['EmpName'];
-			$ok = $stmt->bind_param("iis",$eid,$econtact,$ename);
+			$stmt = $conn->prepare("INSERT INTO mission (Duration,MissonID,Description) values (?,?,?)");
+			$dur = $_POST['Duration'];
+			$mid = $_POST['MissonID'];
+			$mdes = $_POST['Description'];
+			$ok = $stmt->bind_param("sis",$dur,$mid,$mdes);
 			if (!$ok) { die("Bind param error"); }
  			$ok=$stmt->execute();
   			if (!$ok) { die(""); }

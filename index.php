@@ -13,7 +13,7 @@
 				<a href="index.php"><img src="images/peacelogo.png" alt="To add iamge width="150" height="200"></a>
 			</div>
 			<ul>
-				<li class="current"><a href="index.html"><span>Employees</span></a></li>
+				<li class="current"><a href="default.html"><span>Employees</span></a></li>
 				<li><a href="vehicles.php"><span>Vehicles</span></a></li>
 				<li><a href="access.php"><span>Access Levels</span></a></li>
 				<li><a href="missions.php"><span>Missions</span></a></li>
@@ -29,10 +29,10 @@
 			<ul>
 				<li>
 					<h1><?php
-			$servername = "";
-			$username = "";
-			$password = "";
-			$dbname = "";
+			$servername = "localhost";
+			$username = "root";
+			$password = "root";
+			$dbname = "peaceop";
 
 			// Create connection
 			$conn = new mysqli($servername, $username, $password, $dbname);
@@ -59,8 +59,6 @@
 					</div>
 			</ul>
 
-		</div>
-		<div id="footer">
 		</div>
 	</div>
 </body>

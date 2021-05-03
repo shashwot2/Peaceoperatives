@@ -126,10 +126,10 @@ div.body {
 
 #body ul li h1 {
 	font-family: Times New Roman, Times, serif;
-	font-size: 28px;
-	line-height: 28px;
+	font-size: 25px;
+	line-height: 25px;
 	margin: 0;
-	padding: 28px 0;
+	padding: 25px 0;
 }
 
 #body ul li h1 a {
@@ -365,117 +365,4 @@ div.body ul li ul li {
 
 div.body ul li ul li:first-child {
 	float: none;
-}
-
-#footer {
-	background: url(../images/bg-footer.jpg) repeat-x center bottom;
-	height: 433px;
-}
-
-#footer ul {
-	list-style: none;
-	margin: 0 auto 25px;
-	overflow: hidden;
-	padding: 0;
-	width: 960px;
-}
-
-#footer ul li {
-	float: left;
-	margin: 0 0 0 18px;
-	width: 226px;
-}
-
-#footer ul li:first-child {
-	margin: 0;
-}
-
-#footer ul li h3 {
-	color: #0D4D79;
-	font-family: Times New Roman,Times,serif;
-	font-size: 20px;
-	margin: 0 0 5px;
-	text-indent: 15px;
-	text-shadow: 0 1px #F8FFFF;
-}
-
-#footer ul li div {
-	background: url(../images/bg-footer-item.gif) no-repeat;
-	height: 266px;
-	margin: 0;
-	padding: 10px 0 0;
-	position: relative;
-	width: 226px;
-}
-
-#footer ul li div#magazine img {
-	margin: 2px 0 0 3px;
-}
-
-#footer ul li div#gallery img {
-	margin: 5px 13px;
-}
-
-#footer ul li div p,
-#footer ul li div b,
-#footer ul li div span {
-	font-family: Arial, Helvetica, sans-serif;
-	line-height: 24px;
-	margin: 0;
-	padding: 0 13px;
-}
-
-#footer ul li div a {
-	display: block;
-}
-
-#footer ul li div span {
-	font-size: 12px;
-}
-
-#footer ul li div a.viewall {
-	color: #a29c8e;
-	display: block;
-	font-size: 12px;
-	padding: 0 13px 10px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	text-decoration: none;
-	text-align: right;
-}
-
-#footer ul li div b {
-	display: block;
-}
-
-#footer div {
-	margin: 70px auto 0;
-	overflow: hidden;
-	width: 960px;
-}
-
-#footer div p {
-	font-family: Times New Roman, Times, serif;
-	margin: 0;
-}
-
-#footer div p a {
-	color: #988878;
-	text-decoration: none;
-}
-
-#footer div p a:hover {
-	color: #988878;
-	text-decoration: underline;
-}
-
-#footer div p.connect {
-	float: left;
-	color: #988878;
-}
-
-#footer div p.footnote {
-	float: right;
-	color: #988878;
 }

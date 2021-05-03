@@ -38,20 +38,31 @@
 			if ($conn->connect_error) {
  			   die("Connection failed: " . $conn->connect_error);
 			}
-			echo '<form action="addemp.php" method="POST">';
- 			echo 'EmployeeID: <input name="EmployeeID" type="number" min="1"><br/>';
-  			echo 'Contact No: <input name="ContactNo" type="number" required><br/>';
-			echo 'Employee Name: <input name="EmpName" type="text" required><br/>';
+			echo '<form action="addvehicle.php" method="POST">';
+ 			echo 'Type of Vehicle: <input name="VehicleType" type="text" required><br/>';
+  			echo 'VehicleID: <input name="VehicleID" type="number" required><br/>';
+			echo 'Description: <input name="VehicleDescription" type="text" required><br/>';
+			echo 'Equipment: <input name="VehicleEquipment" type="text" required><br/>';
+			echo 'Installation date: <input name="Installationdate" type="text"><br/>';
  			echo '<input type="Submit">';
   			echo '</form>';
 {
-			$stmt = $conn->prepare("INSERT INTO employee (EmployeeID,ContactNo,EmpName) values (?,?,?)");
-			$eid = $_POST['EmployeeID'];
-			$econtact = $_POST['ContactNo'];
-			$ename = $_POST['EmpName'];
-			$ok = $stmt->bind_param("iis",$eid,$econtact,$ename);
+			$stmt = $conn->prepare("INSERT INTO vehicletype (VehicleType,VehicleID) values (?,?)");
+			
+			$stmt2 = $conn->prepare("INSERT INTO vehicledescription (VehicleDescription,VehicleID) values (?,?)");
+			$stmt3 = $conn->prepare("INSERT INTO vehicleequipment (Equipment,InstallationDate,VehicleID) values (?,?,?)");
+			$vt = $_POST['VehicleType'];
+			$vi = $_POST['VehicleID'];
+			$vdes= $_POST['VehicleDescription'];
+			$ve = $_POST['VehicleEquipment'];
+			$vins = $_POST['Installationdate'];
+			$ok = $stmt->bind_param("si",$vt,$vi);
+			$ok2 = $stmt2->bind_param("si",$vdes,$vi);
+			$ok3 = $stmt3->bind_param("ssi,$ve,$vins,$vi");
 			if (!$ok) { die("Bind param error"); }
  			$ok=$stmt->execute();
+			$ok2 = $stmt2->execute();
+			$ok3 = $stmt3->execute();
   			if (!$ok) { die(""); }
   			echo 'Data inserted OK';
 }
