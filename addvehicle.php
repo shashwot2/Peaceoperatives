@@ -47,24 +47,32 @@
  			echo '<input type="Submit">';
   			echo '</form>';
 {
-			$stmt = $conn->prepare("INSERT INTO vehicletype (VehicleType,VehicleID) values (?,?)");
-			
-			$stmt2 = $conn->prepare("INSERT INTO vehicledescription (VehicleDescription,VehicleID) values (?,?)");
-			$stmt3 = $conn->prepare("INSERT INTO vehicleequipment (Equipment,InstallationDate,VehicleID) values (?,?,?)");
 			$vt = $_POST['VehicleType'];
 			$vi = $_POST['VehicleID'];
 			$vdes= $_POST['VehicleDescription'];
 			$ve = $_POST['VehicleEquipment'];
 			$vins = $_POST['Installationdate'];
+			$stmt = $conn->prepare("INSERT INTO vehicletype (VehicleType,VehicleID) values (?,?)");
+			
 			$ok = $stmt->bind_param("si",$vt,$vi);
-			$ok2 = $stmt2->bind_param("si",$vdes,$vi);
-			$ok3 = $stmt3->bind_param("ssi,$ve,$vins,$vi");
 			if (!$ok) { die("Bind param error"); }
  			$ok=$stmt->execute();
-			$ok2 = $stmt2->execute();
-			$ok3 = $stmt3->execute();
-  			if (!$ok) { die(""); }
+			if (!$ok) { die(""); }
   			echo 'Data inserted OK';
+
+			$stmt2 = $conn->prepare("INSERT INTO vehicledescription (VehicleDescription,VehicleID) values (?,?)");
+			$ok2 = $stmt2->bind_param("si",$vdes,$vi);
+			if (!$ok2) { die("Bind param error"); }
+			$ok2=$stmt2->execute();
+			if (!$ok2) {die("");}
+			echo 'Data inserted OK';
+			$stmt3 = $conn->prepare("INSERT INTO vehicleequipment (Equipment,InstallationDate,VehicleID) values (?,?,?)");
+			$ok3 = $stmt3->bind_param("ssi,$ve,$vins,$vi");
+			if (!$ok3) { die("Bind param error"); }
+			$ok3 = $stmt3->execute();			
+			if (!$ok3) {die("");}
+			echo 'Data inserted OK';
+  			
 }
 			$conn->close();
 			?></h1>
